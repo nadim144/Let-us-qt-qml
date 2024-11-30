@@ -37,3 +37,24 @@ int main()
 
 output:
 
+**`Program:`** Worite a program to print **Hello, Qt Console App!**. using QSting project type should be Qt Console application.
+
+**01-FirstQtConsoleApplication**
+
+![Qt Console App](img/img-4.jpg)
+```
+#include <iostream>
+#include <QString>
+using namespace std;
+
+int main()
+{
+    QString name = "Qt Console App";
+    cout << "Hello, " << name.toStdString() << "!" << endl;
+    return 0;
+}
+```
+
+output:
+>Hello, Qt Console App!
+
