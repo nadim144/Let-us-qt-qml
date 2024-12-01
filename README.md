@@ -122,9 +122,86 @@ qDebug() << "Types:" << QString("String") << QChar('x') << QRect(0, 10, 50, 40);
 ```
 
 ### First QT GUI Application.
-Let's write first basic GUI application in Qt Creator. **03-FirstQtWidgetApp**
+
+**`Program-03`**  Write a first GUI program.
+**03-FirstQtWidgetApp**
+
++ Let's write first basic GUI application in Qt Creator. **03-FirstQtWidgetApp**
 + Select project template as - Application (Qt) -> Qt Widget Application.
 + provide Project Name and Locations..
 + Project with created as **03-FirstQtWidgetApp**, You can locate in project explorer. 
 + And it is contain 03-FirstQtWidgetApp.pro file which mean project file similar like vcproj in VC++. and along with folders: Header, Source and Forms.
 + Header folder contain, mainwindow.h file and Source folder contain - mainwindow.cpp and main .cpp and Form folder contain mainwindow.ui file which is similar to .rc (resource file) in MFC.
+
+**`Program-04`**  Write a program to understand signal and slot with help of slider and progress bar.
+**04-MyProgressbar**
++ In this project you will learn signal and slot using slider bar with progress bass. 
++ Slider bar generate signal and which recieve by Progress bar. 
++ **connect(ui->horizontalSlider_2, SIGNAL(valueChanged(int)), ui->progressBar_2, SLOT(setValue(int)))**
+
+
+**`Program-05`**  Write a program to understand Signal and Slot.
+**05-SignalandSlot**
+
+**signalslot.h**
+```
+#ifndef SIGNALSLOT_H
+#define SIGNALSLOT_H
+
+#include <QMainWindow>
+
+QT_BEGIN_NAMESPACE
+namespace Ui
+{
+    class SignalSlot;
+}
+QT_END_NAMESPACE
+
+class SignalSlot : public QMainWindow
+{
+    Q_OBJECT
+
+public:
+    SignalSlot(QWidget *parent = nullptr);
+    ~SignalSlot();
+
+private slots:
+    void on_pushButton_enable_signalslot_clicked();
+    void on_pushButton_disable_signalslot_clicked();
+
+private:
+    Ui::SignalSlot *ui;
+};
+#endif // SIGNALSLOT_H
+```
+**signalslot.cpp**
+```
+#include "signalslot.h"
+#include "ui_signalslot.h"
+
+SignalSlot::SignalSlot(QWidget *parent)
+    : QMainWindow(parent)
+    , ui(new Ui::SignalSlot)
+{
+    ui->setupUi(this);
+    ui->pushButton_enable_signalslot->setText("Enable Signal Slot");
+    ui->pushButton_disable_signalslot->setText("Disable Signal Slot");
+
+}
+
+SignalSlot::~SignalSlot()
+{
+    delete ui;
+}
+
+void SignalSlot::on_pushButton_enable_signalslot_clicked()
+{
+    connect(ui->horizontalSlider_signalslot, SIGNAL(valueChanged(int)), ui->progressBar_signalslot, SLOT(setValue(int)));
+}
+
+
+void SignalSlot::on_pushButton_disable_signalslot_clicked()
+{
+    disconnect(ui->horizontalSlider_signalslot, SIGNAL(valueChanged(int)), ui->progressBar_signalslot, SLOT(setValue(int)));
+}
+```

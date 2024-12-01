@@ -4,8 +4,9 @@
 #include <QMainWindow>
 
 QT_BEGIN_NAMESPACE
-namespace Ui {
-class SignalSlot;
+namespace Ui
+{
+    class SignalSlot;
 }
 QT_END_NAMESPACE
 
@@ -19,7 +20,6 @@ public:
 
 private slots:
     void on_pushButton_enable_signalslot_clicked();
-
     void on_pushButton_disable_signalslot_clicked();
 
 private:
