@@ -1,1 +1,4 @@
 01-FirstQtConsoleApplication/build/
+00-EmptyQmakeProject/build/
+02-qDebug/build/
+03-FirstQtWidgetApp/build/
