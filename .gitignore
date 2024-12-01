@@ -2,3 +2,5 @@
 00-EmptyQmakeProject/build/
 02-qDebug/build/
 03-FirstQtWidgetApp/build/
+04-MyProgressbar/build/
+05-SignalandSlot/build/
