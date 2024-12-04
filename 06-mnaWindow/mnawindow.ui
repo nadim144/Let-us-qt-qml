@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>mnaWindow</class>
+ <widget class="QMainWindow" name="mnaWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>mnaWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPlainTextEdit" name="PLAIN_TXT_EDIT">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>70</y>
+      <width>104</width>
+      <height>70</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>19</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuNew_Dialog">
+    <property name="title">
+     <string>New Dialog</string>
+    </property>
+    <addaction name="actionModel_Dialog"/>
+   </widget>
+   <addaction name="menuNew_Dialog"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionModel_Dialog">
+   <property name="text">
+    <string>Model Dialog</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

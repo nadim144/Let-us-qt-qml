@@ -121,7 +121,7 @@ qDebug() << "Date:" << QDate::currentDate();
 qDebug() << "Types:" << QString("String") << QChar('x') << QRect(0, 10, 50, 40);
 ```
 
-### First QT GUI Application.
+### QT GUI Application.
 
 **`Program-03`**  Write a first GUI program.
 **03-FirstQtWidgetApp**
@@ -205,3 +205,29 @@ void SignalSlot::on_pushButton_disable_signalslot_clicked()
     disconnect(ui->horizontalSlider_signalslot, SIGNAL(valueChanged(int)), ui->progressBar_signalslot, SLOT(setValue(int)));
 }
 ```
+
+**`Program-06`** Create a notepad application using QT Application
+
+To create notepad kind of application, Create Qt Widget application and add plaintext widget to *.ui file and then use below method "setCentralWidget()" inside constructor.
+as seen image below
+![Notepad Application](img/img-5.jpg)
+```
+MainWindow::MainWindow(QWidget *parent)
+    : QMainWindow(parent)
+    , ui(new Ui::MainWindow)
+{
+    ui->setupUi(this);
+    setCentralWidget(ui->PLAIN_TXT_EDIT);
+}
+```
++ setCentralWidget() to make notepad application.
++ where PLAIN_TXT_EDIT is id of plaintext widget.
+
+
+### Model and Modelless Dialog
+
+**Question** How to create model and modelless dialog. it is very simillar to MFC & Win32 applications.
+ 
+ To create to model and modelless dialog, right clickk on **form->Add New** and then from choose template select **QT** and select **Qt Designer Form Class**
+
+ and then choose dialog with button and click next. it get addede another 
