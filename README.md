@@ -224,10 +224,18 @@ MainWindow::MainWindow(QWidget *parent)
 + where PLAIN_TXT_EDIT is id of plaintext widget.
 
 
-### Model and Modelless Dialog
+### Modal and Modalless Dialog
 
-**Question** How to create model and modelless dialog. it is very simillar to MFC & Win32 applications.
+**Question** How to create modal and modalless dialog. it is very simillar to MFC & Win32 applications.
  
- To create to model and modelless dialog, right clickk on **form->Add New** and then from choose template select **QT** and select **Qt Designer Form Class**
+ To create to modal and modalless dialog, right clickk on **form->Add New** and then from choose template select **QT** and select **Qt Designer Form Class**
 
  and then choose dialog with button and click next. it get addede another 
+
+ ```
+    #include "mnadialog.h"
+    
+    mnaDialog mnaDlg;
+    mnaDlg.setModal(true);
+    mnaDlg.exec();
+ ```
