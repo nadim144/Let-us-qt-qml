@@ -10,12 +10,15 @@ CONFIG += c++17
 
 SOURCES += \
     main.cpp \
+    mnadialog.cpp \
     mnawindow.cpp
 
 HEADERS += \
+    mnadialog.h \
     mnawindow.h
 
 FORMS += \
+    mnadialog.ui \
     mnawindow.ui
 
 # Default rules for deployment.

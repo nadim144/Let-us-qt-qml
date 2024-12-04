@@ -1,5 +1,6 @@
 #include "mnawindow.h"
 #include "ui_mnawindow.h"
+#include "mnadialog.h"
 
 mnaWindow::mnaWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -16,6 +17,8 @@ mnaWindow::~mnaWindow()
 
 void mnaWindow::on_actionModel_Dialog_triggered()
 {
-
+    mnaDialog mnaDlg;
+    mnaDlg.setModal(true);
+    mnaDlg.exec();
 }
 
