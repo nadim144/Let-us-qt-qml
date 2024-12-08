@@ -235,7 +235,26 @@ MainWindow::MainWindow(QWidget *parent)
  ```
     #include "mnadialog.h"
     
-    mnaDialog mnaDlg;
-    mnaDlg.setModal(true);
-    mnaDlg.exec();
+    void mnaWindow::on_actionModel_Dialog_triggered()
+    {
+        mnaDialog mnaDlg;
+        mnaDlg.setModal(true);
+        mnaDlg.exec();
+    }
  ```
+ ### Modalless Dialog.
++ To create modalless dialog, we need to create pointer of dialog class and dynamically create object and delete it in the destructor.
+```
+#include "mnadialog.h"
+class mnaWindow : public QMainWindow
+{
+private:
+    mnaDialog *modallessDlg;
+};
+
+void mnaWindow::on_actionModalless_Dialog_triggered()
+{
+    modallessDlg = new mnaDialog(getModalDialogFlag());
+    modallessDlg->show();
+}
+```

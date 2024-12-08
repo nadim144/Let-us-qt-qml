@@ -3,8 +3,9 @@
 
 #include <QDialog>
 
-namespace Ui {
-class mnaDialog;
+namespace Ui
+{
+    class mnaDialog;
 }
 
 class mnaDialog : public QDialog
@@ -12,7 +13,7 @@ class mnaDialog : public QDialog
     Q_OBJECT
 
 public:
-    explicit mnaDialog(QWidget *parent = nullptr);
+    explicit mnaDialog(bool bModalDialogFlag, QWidget *parent = nullptr);
     ~mnaDialog();
 
 private:

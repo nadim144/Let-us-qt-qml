@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/newNadim">
+        <file>src/mnawindow.cpp</file>
+    </qresource>
+</RCC>

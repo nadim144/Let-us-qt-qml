@@ -11,7 +11,10 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>mnaWindow</string>
+   <string>Hello Nadim</string>
+  </property>
+  <property name="windowIcon">
+   <iconset theme="QIcon::ThemeIcon::CallStart"/>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPlainTextEdit" name="PLAIN_TXT_EDIT">
@@ -31,7 +34,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>19</height>
+     <height>26</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuNew_Dialog">
@@ -39,13 +42,20 @@
      <string>New Dialog</string>
     </property>
     <addaction name="actionModel_Dialog"/>
+    <addaction name="separator"/>
+    <addaction name="actionModalless_Dialog"/>
    </widget>
    <addaction name="menuNew_Dialog"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionModel_Dialog">
    <property name="text">
-    <string>Model Dialog</string>
+    <string>Modal Dialog</string>
+   </property>
+  </action>
+  <action name="actionModalless_Dialog">
+   <property name="text">
+    <string>Modalless Dialog</string>
    </property>
   </action>
  </widget>
