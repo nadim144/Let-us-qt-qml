@@ -16,7 +16,7 @@ Mna_Winodows::~Mna_Winodows()
 
 void Mna_Winodows::on_Bttn_OK_clicked()
 {
-    QString str = ui->Edit_Name->text();
+    QString str = ui->ui_editbox_name->text();
     QMessageBox qObj;
     qObj.setWindowTitle("08-Simple Dialog");
     qObj.setText("Hello " + str);
@@ -28,13 +28,13 @@ void Mna_Winodows::on_Bttn_OK_clicked()
     qObj.addButton(QMessageBox::No);
 
     //Set Default button as "No"
-    //qObj.setDefaultButton(QMessageBox::No);
+    qObj.setDefaultButton(QMessageBox::No);
     if(qObj.exec() == QMessageBox::Yes)
     {
-        ui->Edit_Name->setText("Yes");
+        ui->ui_editbox_name->setText("Yes");
     }
     {
-        ui->Edit_Name->setText("NO");
+        ui->ui_editbox_name->setText("NO");
     }
 }
 

@@ -258,3 +258,61 @@ void mnaWindow::on_actionModalless_Dialog_triggered()
     modallessDlg->show();
 }
 ```
+
+## Create a Dialog application and take user name input and display with Hello <User Name> in Messagebox.
+
++ it will help you to understand how MessageBax working in QT.
+```
+void Mna_Winodows::on_Bttn_OK_clicked()
+{
+    QString str = ui->ui_editbox_name->text();
+    QMessageBox qObj;
+    qObj.setWindowTitle("08-Simple Dialog");
+    qObj.setText("Hello " + str);
+
+    //Add "Yes" button into QMessageBox
+    qObj.setStandardButtons(QMessageBox::Yes);
+
+    //Add "No" button into QMessageBox
+    qObj.addButton(QMessageBox::No);
+
+    //Set Default button as "No"
+    qObj.setDefaultButton(QMessageBox::No);
+    if(qObj.exec() == QMessageBox::Yes)
+    {
+        ui->ui_editbox_name->setText("Yes");
+    }
+    {
+        ui->ui_editbox_name->setText("NO");
+    }
+}
+```
+
+## Basic QLabel application. (09-BasicAppHTML)
+
+Before look into code, please have look into .pro file (it is important).
+```
+QT       += core gui
+
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+SOURCES += \
+    main.cpp
+
+```
+
+```
+#include <QApplication>
+#include <QLabel>
+
+int main(int argc, char *argv[])
+{
+    QApplication app(argc, argv);
+    QLabel *label = new QLabel("Hello Nadim Hello Nadim Hello Nadim");
+    label->show();
+    return app.exec();
+}
+```
+![Bassic QLabel Application ](img/img-7.jpg)
+
+---
+
